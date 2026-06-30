@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ece14e67-f78f-4a15-9d6e-5d2c8802cfd6" name="Changes" comment="" />
+    <list default="true" id="ece14e67-f78f-4a15-9d6e-5d2c8802cfd6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +22,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/thiago26nery/questionario-backend.git",
+    "accountId": "fd0b1795-1152-4415-a5d6-b04b358555d7"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -48,7 +56,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.QuestionariosApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/OneDrive/Área de Trabalho/questionarios",
     "node.js.detected.package.eslint": "true",
@@ -87,7 +95,7 @@
       <workItem from="1782735219176" duration="4235000" />
       <workItem from="1782739631462" duration="46000" />
       <workItem from="1782740116660" duration="8000" />
-      <workItem from="1782843155223" duration="3665000" />
+      <workItem from="1782843155223" duration="4323000" />
     </task>
     <servers />
   </component>
