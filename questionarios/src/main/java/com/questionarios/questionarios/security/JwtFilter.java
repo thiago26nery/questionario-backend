@@ -32,6 +32,11 @@ public class JwtFilter extends OncePerRequestFilter {
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
 
+            // Remove prefixo "Bearer " duplicado (comum ao colar token com prefixo no Swagger)
+            while (token.startsWith("Bearer ")) {
+                token = token.substring(7);
+            }
+
             if (jwtUtil.validarToken(token)) {
                 String email = jwtUtil.extrairEmail(token);
 

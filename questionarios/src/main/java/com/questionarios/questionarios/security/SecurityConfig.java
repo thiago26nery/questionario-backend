@@ -1,5 +1,6 @@
 package com.questionarios.questionarios.config;
 
+import com.questionarios.questionarios.security.JwtAuthEntryPoint;
 import com.questionarios.questionarios.security.JwtFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -19,12 +20,17 @@ public class SecurityConfig {
     @Autowired
     private JwtFilter jwtFilter;
 
+    @Autowired
+    private JwtAuthEntryPoint jwtAuthEntryPoint;
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .exceptionHandling(exception ->
+                        exception.authenticationEntryPoint(jwtAuthEntryPoint))
                 .authorizeHttpRequests(auth -> auth
                         // Endpoints públicos (não precisam de login)
                         .requestMatchers(
