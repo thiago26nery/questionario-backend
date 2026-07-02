@@ -102,7 +102,7 @@
       "response": []
     },
     {
-      "name": "Questionario para aluno",
+      "name": "Questionario para Aluno",
       "request": {
         "method": "GET",
         "header": []

@@ -4,6 +4,7 @@ import com.questionarios.questionarios.dto.AlunoDTO;
 import com.questionarios.questionarios.entity.Aluno;
 import com.questionarios.questionarios.service.AlunoService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
@@ -36,6 +37,7 @@ public class AlunoController {
 
     @Operation(summary = "Listar todos os alunos")
     @GetMapping
+    @SecurityRequirement(name = "bearerAuth")
     public ResponseEntity<List<Aluno>> listar() {
         return ResponseEntity.ok(alunoService.listar());
     }
@@ -45,4 +47,5 @@ public class AlunoController {
     public ResponseEntity<Aluno> buscarPorId(@PathVariable Long id) {
         return ResponseEntity.ok(alunoService.buscarPorId(id));
     }
+
 }

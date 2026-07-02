@@ -32,11 +32,12 @@ public class SecurityConfig {
                                 "/professores/login",
                                 "/alunos/cadastrar",
                                 "/questionarios/responder",
+                                "/questionarios/*/enviar/*", // <-- ADICIONE ESTA LINHA EXATAMENTE AQUI!
                                 "/swagger-ui/**",
-                                "/swagger-ui.html",    // <-- ADICIONADO AQUI
+                                "/swagger-ui.html",
                                 "/v3/api-docs/**",
                                 "/api-docs/**",
-                                "/api-docs"            // <-- ADICIONADO AQUI
+                                "/api-docs"
                         ).permitAll()
                         // Todo o resto precisa de autenticação
                         .anyRequest().authenticated()

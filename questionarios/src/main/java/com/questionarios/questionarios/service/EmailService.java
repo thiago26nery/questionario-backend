@@ -11,19 +11,17 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    // Envia o e-mail com o link do questionário para o aluno
+    // Envia o e-mail simulado no console para não estourar erro de SMTP
     public void enviarLinkQuestionario(String emailDestino, String token, String nomeAluno) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo(emailDestino);
-        message.setSubject("Questionário disponível para você!");
-        message.setText(
-                "Olá, " + nomeAluno + "!\n\n" +
-                        "Um questionário foi disponibilizado para você.\n\n" +
-                        "Acesse pelo link abaixo:\n" +
-                        "http://localhost:8080/questionarios/responder?token=" + token + "\n\n" +
-                        "Atenção: este link expira conforme o tempo configurado pelo professor.\n\n" +
-                        "Bons estudos!"
-        );
-        mailSender.send(message);
+        System.out.println("====== [SIMULAÇÃO DE E-MAIL ENVIADO] ======");
+        System.out.println("Para: " + emailDestino);
+        System.out.println("Assunto: Questionário disponível para você!");
+        System.out.println("Mensagem:\nOlá, " + nomeAluno + "!\n\n" +
+                "Um questionário foi disponibilizado para você.\n\n" +
+                "Acesse pelo link abaixo:\n" +
+                "http://localhost:8080/questionarios/responder?token=" + token + "\n\n" +
+                "Atenção: este link expira conforme o tempo configurado pelo professor.\n\n" +
+                "Bons estudos!");
+        System.out.println("===========================================");
     }
 }

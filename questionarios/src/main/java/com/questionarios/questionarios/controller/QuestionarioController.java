@@ -5,6 +5,7 @@ import com.questionarios.questionarios.dto.QuestionarioDTO;
 import com.questionarios.questionarios.entity.Questionario;
 import com.questionarios.questionarios.service.QuestionarioService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
@@ -26,6 +27,7 @@ public class QuestionarioController {
 
     @Operation(summary = "Criar questionário (professor autenticado)")
     @PostMapping("/criar")
+    @SecurityRequirement(name = "bearerAuth")
     public ResponseEntity<EntityModel<Questionario>> criar(
             @RequestBody QuestionarioDTO dto,
             Authentication auth) {
@@ -49,9 +51,11 @@ public class QuestionarioController {
 
     @Operation(summary = "Enviar questionário para aluno por e-mail")
     @PostMapping("/{questionarioId}/enviar/{alunoId}")
+    @SecurityRequirement(name = "bearerAuth")
     public ResponseEntity<Map<String, String>> enviarParaAluno(
             @PathVariable Long questionarioId,
-            @PathVariable Long alunoId) {
+            @PathVariable Long alunoId,
+            Authentication auth) {
 
         String msg = questionarioService.enviarParaAluno(questionarioId, alunoId);
         return ResponseEntity.ok(Map.of("mensagem", msg));
@@ -73,12 +77,14 @@ public class QuestionarioController {
 
     @Operation(summary = "Ver estatísticas do questionário")
     @GetMapping("/{id}/estatisticas")
+    @SecurityRequirement(name = "bearerAuth")
     public ResponseEntity<Map<String, Object>> estatisticas(@PathVariable Long id) {
         return ResponseEntity.ok(questionarioService.estatisticas(id));
     }
 
     @Operation(summary = "Listar todos os questionários")
     @GetMapping
+    @SecurityRequirement(name = "bearerAuth")
     public ResponseEntity<List<Questionario>> listar() {
         return ResponseEntity.ok(questionarioService.listar());
     }
