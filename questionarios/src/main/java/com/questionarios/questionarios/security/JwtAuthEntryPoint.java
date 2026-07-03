@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-// Retorna corpo JSON padronizado quando falta ou é inválido o token
 @Component
 public class JwtAuthEntryPoint implements AuthenticationEntryPoint {
 
@@ -22,7 +21,6 @@ public class JwtAuthEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
-        // 401
         ErroResponseDTO erro = new ErroResponseDTO(
                 HttpStatus.UNAUTHORIZED.value(),
                 "Token ausente, inválido ou expirado",
