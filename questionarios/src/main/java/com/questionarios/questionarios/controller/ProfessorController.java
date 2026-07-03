@@ -22,6 +22,8 @@ public class ProfessorController {
     @Autowired
     private ProfessorService professorService;
 
+    //POST /cadastrar: recebe ProfessorDTO,
+    // chama professorService.cadastrar()
     @Operation(summary = "Cadastrar professor")
     @PostMapping("/cadastrar")
     public ResponseEntity<EntityModel<Professor>> cadastrar(@RequestBody ProfessorDTO dto) {
@@ -36,6 +38,8 @@ public class ProfessorController {
         return ResponseEntity.ok(model);
     }
 
+    // recebe LoginDTO, chama professorService.login(),
+    // retorna Map com a chave 'token' e o valor JWT
     @Operation(summary = "Login do professor")
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody LoginDTO dto) {

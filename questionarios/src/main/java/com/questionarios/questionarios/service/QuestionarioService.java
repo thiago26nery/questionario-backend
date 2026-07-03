@@ -61,7 +61,7 @@ public class QuestionarioService {
             perguntas.add(pergunta);
         }
         questionario.setPerguntas(perguntas);
-
+        // salva em cascata
         return questionarioRepository.save(questionario);
     }
 
@@ -81,7 +81,7 @@ public class QuestionarioService {
         token.setAluno(aluno);
         token.setQuestionario(questionario);
         token.setUsado(false);
-        // Define expiração com base na validade configurada
+        // calcula a dataExpiracao somando validadeTokenMinutos ao momento atual
         token.setDataExpiracao(
                 LocalDateTime.now().plusMinutes(questionario.getValidadeTokenMinutos())
         );
@@ -152,6 +152,7 @@ public class QuestionarioService {
                     .findFirst()
                     .orElseThrow(() -> new RuntimeException("Alternativa não encontrada"));
 
+            // verifica se a alternativa é a correta
             boolean correta = alternativa.getCorreta();
 
             // Salva a resposta do aluno

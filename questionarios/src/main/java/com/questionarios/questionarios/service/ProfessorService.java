@@ -33,14 +33,14 @@ public class ProfessorService {
 
     // Realiza o login e retorna o token JWT
     public String login(LoginDTO dto) {
-        Professor professor = professorRepository.findByEmail(dto.getEmail())
+        Professor professor = professorRepository.findByEmail(dto.getEmail()) // busca pelo email
                 .orElseThrow(() -> new RuntimeException("Professor não encontrado"));
 
         // Verifica se a senha está correta
         if (!passwordEncoder.matches(dto.getSenha(), professor.getSenha())) {
             throw new RuntimeException("Senha incorreta");
         }
-
+        // retorna o token
         return jwtUtil.gerarToken(professor.getEmail());
     }
 }

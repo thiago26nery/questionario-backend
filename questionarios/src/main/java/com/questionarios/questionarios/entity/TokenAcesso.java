@@ -16,8 +16,10 @@ public class TokenAcesso {
     @Column(nullable = false, unique = true)
     private String token;
 
+    // calculado somando validadeTokenMinutos ao momento atual
     private LocalDateTime dataExpiracao;
 
+    // começa como false; vira true após o aluno responder
     private Boolean usado = false;
 
     @ManyToOne

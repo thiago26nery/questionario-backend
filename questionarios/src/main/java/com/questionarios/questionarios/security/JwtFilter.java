@@ -13,6 +13,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+// Filtro que intercepta TODAS as requisições
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 
@@ -31,6 +32,11 @@ public class JwtFilter extends OncePerRequestFilter {
         // Verifica se o header existe e começa com "Bearer "
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
+
+            // Remove prefixo "Bearer " duplicado (comum ao colar token com prefixo no Swagger)
+            while (token.startsWith("Bearer ")) {
+                token = token.substring(7);
+            }
 
             if (jwtUtil.validarToken(token)) {
                 String email = jwtUtil.extrairEmail(token);

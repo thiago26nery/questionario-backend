@@ -10,6 +10,7 @@ import lombok.Data;
 public class Alternativa {
 
     @Id
+    // criação de chaves primárias automáticas
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

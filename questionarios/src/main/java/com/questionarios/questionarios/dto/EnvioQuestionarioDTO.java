@@ -6,6 +6,7 @@ import java.util.List;
 // Usado quando o aluno envia todas as respostas
 @Data
 public class EnvioQuestionarioDTO {
+    // validar e identificar aluno / questionario
     private String token;
     private List<RespostaDTO> respostas;
 }

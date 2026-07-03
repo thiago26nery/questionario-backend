@@ -19,6 +19,7 @@ public class Pergunta {
 
     private Double pontuacao;
 
+    // evitar o problema da recursão infinita
     @ManyToOne
     @JoinColumn(name = "questionario_id")
     @JsonIgnoreProperties("perguntas")

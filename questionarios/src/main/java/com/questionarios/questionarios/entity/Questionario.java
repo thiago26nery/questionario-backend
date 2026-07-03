@@ -25,11 +25,13 @@ public class Questionario {
     // Tempo em minutos para o token expirar
     private Integer validadeTokenMinutos;
 
-    @ManyToOne
+    @ManyToOne // professor cria
     @JoinColumn(name = "professor_id")
-    @JsonIgnoreProperties("questionarios")
+    @JsonIgnoreProperties("questionarios") // evita referencia circular infinita
     private Professor professor;
 
+    // lista de perguntas
+    // repita automaticamente (em cascata) na entidade relacionada.
     @OneToMany(mappedBy = "questionario", cascade = CascadeType.ALL)
     private List<Pergunta> perguntas;
 

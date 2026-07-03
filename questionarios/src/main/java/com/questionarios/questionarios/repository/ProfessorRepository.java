@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface ProfessorRepository extends JpaRepository<Professor, Long> {
+    // busca professor pelo e-mail
     Optional<Professor> findByEmail(String email);
 }

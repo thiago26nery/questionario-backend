@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailService {
 
-    @Autowired
+    @Autowired // credenciais do gmail
     private JavaMailSender mailSender;
 
     // Envia o e-mail simulado no console para não estourar erro de SMTP
+    // contem o token
     public void enviarLinkQuestionario(String emailDestino, String token, String nomeAluno) {
         System.out.println("====== [SIMULAÇÃO DE E-MAIL ENVIADO] ======");
         System.out.println("Para: " + emailDestino);

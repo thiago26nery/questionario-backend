@@ -31,6 +31,6 @@ public class AlunoService {
     // Busca aluno por ID
     public Aluno buscarPorId(Long id) {
         return alunoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
+                .orElseThrow(() -> new RuntimeException("Aluno não encontrado")); // 400
     }
 }
