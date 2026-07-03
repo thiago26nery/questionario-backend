@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ece14e67-f78f-4a15-9d6e-5d2c8802cfd6" name="Changes" comment="escondendo e-mail e senha">
-      <change afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/security/JwtAuthEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+    <list default="true" id="ece14e67-f78f-4a15-9d6e-5d2c8802cfd6" name="Changes" comment="Trabalho final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/controller/ProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/controller/ProfessorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/dto/EnvioQuestionarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/dto/EnvioQuestionarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Alternativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Alternativa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Pergunta.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Pergunta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Questionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/Questionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/TokenAcesso.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/entity/TokenAcesso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/AlternativaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/AlternativaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/AlunoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/AlunoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/PerguntaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/PerguntaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/ProfessorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/ProfessorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/QuestionarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/QuestionarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/RespostaAlunoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/RespostaAlunoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/TokenAcessoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/repository/TokenAcessoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/security/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/security/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/AlunoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/AlunoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/ProfessorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/ProfessorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/QuestionarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/questionarios/src/main/java/com/questionarios/questionarios/service/QuestionarioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +119,7 @@
       <workItem from="1783011650992" duration="1084000" />
       <workItem from="1783012898701" duration="14130000" />
       <workItem from="1783032236852" duration="2986000" />
-      <workItem from="1783037479732" duration="4670000" />
+      <workItem from="1783037479732" duration="5060000" />
     </task>
     <task id="LOCAL-00001" summary="escondendo e-mail e senha">
       <option name="closed" value="true" />
@@ -155,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782944674091</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Trabalho final">
+      <option name="closed" value="true" />
+      <created>1783042370334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1783042370335</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="escondendo e-mail e senha" />
-    <option name="LAST_COMMIT_MESSAGE" value="escondendo e-mail e senha" />
+    <MESSAGE value="Trabalho final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trabalho final" />
   </component>
 </project>
